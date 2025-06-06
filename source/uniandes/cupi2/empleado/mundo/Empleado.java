@@ -240,7 +240,15 @@ public class Empleado
      */
     public String metodo1( )
     {
-        return "Respuesta 1";
+    	int edad = calcularEdad();
+    	if(edad >= 18)
+    	{
+    		return "El empleado es mayor de edad";
+    		
+    	} else{
+    		
+    		return "El empleado es menor de edad";
+    	}
     }
 
     /**
@@ -249,7 +257,10 @@ public class Empleado
      */
     public String metodo2( )
     {
-        return "Respuesta 2";
+    	String nombreCompleto = nombre + "" + apellido;
+    	
+    	int edad = calcularEdad();
+    	
+    	return "Nombre Completo: " + nombreCompleto +  "\nEdad: " + edad  + " años\nSalario: $" + salario;
     }
-
 }
